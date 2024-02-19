@@ -112,11 +112,6 @@ def listar_desafio(request):
     categorias = Categoria.objects.all()
     dificuldades = Flashcard.DIFICULDADE_CHOICES
 
-    # TODO status
-    # for desafio in desafios:
-    #     faltantes = desafio.flashcards.filter(respondido=False).count()
-    #     print(faltantes)
-
     categoria_filtrar = request.GET.get('categoria')
     dificuldade_filtrar = request.GET.get('dificuldade')
 
